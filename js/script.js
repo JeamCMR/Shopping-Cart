@@ -131,6 +131,10 @@ class ShoppingCart {
         <p>${price}</p>
         </div>` 
     }
+
+    getCounts(){
+        return this.items.length;
+      }
     
 };
 
@@ -143,6 +147,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
     btn =>{
         btn.addEventListener("click", event =>{
             cart.addItem(Number(event.target.id),products);
+            totalNumberOfItems.textContent = cart.getCounts();
         })
     }
 );

@@ -187,4 +187,6 @@ cartBtn.addEventListener("click", ()=>{
     isCartShowing = !isCartShowing;
     showHideCartSpan.textContent =  isCartShowing? "Hide" : "Show";
     cartContainer.style.display = isCartShowing? "block" : "none";
-})
+});
+
+clearCartBtn.addEventListener("click", cart.clearCart.bind(cart));
